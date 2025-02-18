@@ -1,0 +1,7 @@
+{
+  "name": "vueCapAuth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
