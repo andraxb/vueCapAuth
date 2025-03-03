@@ -48,7 +48,6 @@
               name: 'vueCapAuth',
               // Use window.location.hostname if your local server domain matches your RP id.
               id: window.location.hostname  
-                // id: '192.168.178.66'
             },
             user: {
               // Convert your user id (should be a byte array)

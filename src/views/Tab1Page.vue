@@ -31,13 +31,9 @@ export default defineComponent({
     },
     setup() {
       const openAuth = async() => {
-        try {
-          // Replace the URL with your local secure URL.
-          // For example, if you serve your local website at capacitor://localhost/webauthn:
-          // await Browser.open({ url: 'capacitor://localhost/webauthn' });
-          
+        try {          
           await InAppBrowser.openInSystemBrowser({
-              url: "https://192.168.178.66:8100/webauthn",
+              url: "https://www.andrax.nl/webauthn",
               options: DefaultSystemBrowserOptions
           });
         } catch (error) {
