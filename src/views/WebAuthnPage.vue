@@ -14,6 +14,9 @@
           <h2>Credential Created</h2>
           <pre>{{ credentialData }}</pre>
         </div>
+        <!-- <ion-button expand="block" @click="login()">
+          Login
+        </ion-button> -->
       </ion-content>
     </ion-page>
   </template>
@@ -33,7 +36,7 @@
       IonButton
     },
     setup() {
-      const credentialData = ref(null);
+      const credentialData = ref("");
   
       const registerCredential = async () => {
         try {
@@ -42,9 +45,10 @@
           
           const publicKeyOptions: PublicKeyCredentialCreationOptions = {
             rp: {
-              name: 'Test App',
+              name: 'vueCapAuth',
               // Use window.location.hostname if your local server domain matches your RP id.
               id: window.location.hostname  
+                // id: '192.168.178.66'
             },
             user: {
               // Convert your user id (should be a byte array)
@@ -75,8 +79,11 @@
           console.error('Error during WebAuthn registration:', err);
         }
       };
+      const login = async () => {
+
+      }
   
-      return { registerCredential, credentialData };
+      return { registerCredential, login, credentialData };
     }
   });
   </script>
