@@ -74,6 +74,8 @@
           credentialData.value = JSON.stringify(credential, null, 2);
   
           // TODO: Send the credential to your backend server for further processing.
+          window.parent.postMessage('test', '*');
+          window.parent.postMessage(JSON.stringify(credential), '*');
         } catch (err: any) {
           console.error('Error during WebAuthn registration:', err);
         }
